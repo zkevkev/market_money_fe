@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Name </th>
+    <th>City </th>
+    <th>State </th>
+  </tr>
+  <% @markets.each do |market| %>
+    <tr>
+      <td><%= market.name %></td>
+      <td><%= market.city %></td>
+      <td><%= market.state %></td>
+    </tr>
+  <% end %>
+</table>

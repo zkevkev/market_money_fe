@@ -3,7 +3,7 @@ class MarketsFacade
     markets_service = MarketsService.new
     parsed = markets_service.market_query[:data]
     parsed.map do |market|
-      Market.new(market)
+      Market.new(market[:attributes])
     end
   end
 end
