@@ -1,6 +1,6 @@
 class MarketsService
   def conn
-    conn = Faraday.new(url: 'http://localhost:5000/')
+    conn = Faraday.new(url: 'http://localhost:3000/')
   end
   
   def get_url(url)
@@ -9,6 +9,6 @@ class MarketsService
   end
   
   def market_query
-    get_url('/api/v0/markets')
+    get_url('api/v0/markets')
   end
 end
