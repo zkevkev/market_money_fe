@@ -7,6 +7,7 @@ class MarketsFacade
     end
   end
 
+  # break this up into helpers
   def find_market(id)
     markets_service = MarketsService.new
     vendors_facade = VendorsFacade.new
