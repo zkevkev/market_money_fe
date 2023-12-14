@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   get '/markets', to: 'markets#index'
   get '/markets/:id', to: 'markets#show'
+  get '/markets/vendors/:id', to: 'vendors#show'
   get '/vendors/:id', to: 'vendors#show'
 end

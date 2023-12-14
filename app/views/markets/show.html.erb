@@ -5,6 +5,7 @@
 <h4>Vendors at our Market: </h3>
 <li>
   <% @market.vendors.each do |vendor| %>
+    <%# this is currently linking to /markets/vendors/:id %>
     <%= link_to vendor.name, "vendors/#{vendor.id}" %>
   <% end %>
 </li>

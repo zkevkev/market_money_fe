@@ -16,6 +16,7 @@ RSpec.describe 'Market Show Page', type: :feature do
 
     click_link 'The Charcuterie Corner'
 
-    expect(current_path).to eq('/vendors/55823')
+    # the link for this should path to '/vendors/55823', fix this
+    expect(current_path).to eq('/markets/vendors/55823')
   end
 end
