@@ -40,7 +40,7 @@ RSpec.describe MarketsService do
       expect(@service.single_market_query(322458)).to be_a(Hash)
 
       market = @service.single_market_query(322458)[:data]
-require 'pry'; binding.pry
+
       expect(market).to have_key(:id)
       expect(market[:id]).to be_a(String)
 
