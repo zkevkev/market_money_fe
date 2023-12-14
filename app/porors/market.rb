@@ -1,13 +1,14 @@
 class Market
-  attr_accessor :id, :vendors
-  attr_reader :name,
+  attr_accessor :vendors
+  attr_reader :id,
+              :name,
               :street,
               :city,
               :state,
               :zip
 
-  def initialize(details)
-    @id = nil
+  def initialize(details, id)
+    @id = id
     @name = details[:name]
     @street = details[:street]
     @city = details[:city]

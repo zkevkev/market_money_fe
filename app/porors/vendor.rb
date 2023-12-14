@@ -1,13 +1,13 @@
 class Vendor
-  attr_accessor :id
-  attr_reader :name, 
+  attr_reader :id,
+              :name, 
               :description,
               :contact_name,
               :contact_phone,
               :credit_accepted
 
-  def initialize(details)
-    @id = nil
+  def initialize(details, id)
+    @id = id
     @name = details[:name]
     @description = details[:description]
     @contact_name = details[:contact_name]

@@ -3,12 +3,11 @@ require 'rails_helper'
 RSpec.describe Market do
   before(:each) do
     market_details = {
-      id: '1',
       name: "14&U Farmers' Market",
       city: 'District of Columbia',
       state: 'Washington'
     }
-    @market = Market.new(market_details)
+    @market = Market.new(market_details, '1')
   end
 
   it 'has attributes' do
