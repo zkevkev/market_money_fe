@@ -16,4 +16,14 @@ RSpec.describe MarketsFacade, type: :facade do
       expect(market).to respond_to(:state)
     end
   end
+
+  it '#find_market' do
+    market = @facade.find_market(322458)
+
+    expect(market).to be_a(Market)
+    expect(market).to respond_to(:id)
+    expect(market).to respond_to(:name)
+    expect(market).to respond_to(:city)
+    expect(market).to respond_to(:state)
+  end
 end

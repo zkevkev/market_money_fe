@@ -11,4 +11,8 @@ class MarketsService
   def market_query
     get_url('api/v0/markets')
   end
+
+  def single_market_query(id)
+    get_url("api/v0/markets/#{id}")
+  end
 end
