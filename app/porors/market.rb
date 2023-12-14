@@ -1,5 +1,5 @@
 class Market
-  attr_accessor :id
+  attr_accessor :id, :vendors
   attr_reader :name, 
               :city,
               :state
@@ -9,5 +9,6 @@ class Market
     @name = details[:name]
     @city = details[:city]
     @state = details[:state]
+    @vendors = []
   end
 end

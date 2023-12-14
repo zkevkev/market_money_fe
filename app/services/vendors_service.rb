@@ -1,4 +1,4 @@
-class MarketsService
+class VendorsService
   # move to module
   def conn
     conn = Faraday.new(url: 'http://localhost:3000/')
@@ -8,12 +8,8 @@ class MarketsService
     response = conn.get(url)
     JSON.parse(response.body, symbolize_names: true)
   end
-  
-  def market_query
-    get_url('api/v0/markets')
-  end
 
-  def single_market_query(id)
-    get_url("api/v0/markets/#{id}")
+  def single_vendor_query(id)
+    get_url("api/v0/vendors/#{id}")
   end
 end
