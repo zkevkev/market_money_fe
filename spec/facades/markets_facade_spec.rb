@@ -12,8 +12,10 @@ RSpec.describe MarketsFacade, type: :facade do
       expect(market).to be_a(Market)
       expect(market).to respond_to(:id)
       expect(market).to respond_to(:name)
+      expect(market).to respond_to(:street)
       expect(market).to respond_to(:city)
       expect(market).to respond_to(:state)
+      expect(market).to respond_to(:zip)
     end
   end
 
@@ -23,7 +25,9 @@ RSpec.describe MarketsFacade, type: :facade do
     expect(market).to be_a(Market)
     expect(market).to respond_to(:id)
     expect(market).to respond_to(:name)
+    expect(market).to respond_to(:street)
     expect(market).to respond_to(:city)
     expect(market).to respond_to(:state)
+    expect(market).to respond_to(:zip)
   end
 end
