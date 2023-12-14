@@ -10,6 +10,7 @@ RSpec.describe MarketsFacade, type: :facade do
 
     @facade.list_markets.each do |market|
       expect(market).to be_a(Market)
+      expect(market).to respond_to(:id)
       expect(market).to respond_to(:name)
       expect(market).to respond_to(:city)
       expect(market).to respond_to(:state)

@@ -3,12 +3,14 @@
     <th>Name </th>
     <th>City </th>
     <th>State </th>
+    <th> </th>
   </tr>
   <% @markets.each do |market| %>
-    <tr>
+    <tr id='<%= market.id %>-index'>
       <td><%= market.name %></td>
       <td><%= market.city %></td>
       <td><%= market.state %></td>
+      <td><%= button_to 'More Info', "/markets/#{market.id}", method: :get %></td>
     </tr>
   <% end %>
 </table>
